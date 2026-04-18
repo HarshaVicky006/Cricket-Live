@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --color-bg: #FDF2F2; /* Very mild red tint */
+  --color-surface: #FFFFFF;
+  --color-accent: #C5A02B; /* Gold */
+  --color-text-dim: #94A3B8;
+  --color-border-dim: #FEE2E2; /* Mild red/pink border */
+  
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+  /* Dynamic Background Mix: Red gradient at top, fading into Mild Gold */
+  background: linear-gradient(180deg, #FEE2E2 0%, #FFFBF0 100%);
+  @apply text-slate-900 font-sans antialiased overflow-hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Custom scrollbar to match theme */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-dim); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
